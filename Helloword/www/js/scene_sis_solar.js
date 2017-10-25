@@ -108,7 +108,7 @@
 		jupiter.rotation.z += 0.002;
 		jupiter.rotation.y += 0.002;
 		pr.rotation.y += 0.0002;
-		pr.rotation.x += 0.0002;
+		//pr.rotation.x += 0.0002;
 		renderer.render(scene, camera);
 	}
 
