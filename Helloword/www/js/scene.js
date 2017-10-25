@@ -13,8 +13,8 @@
 		let mesh;
 
 		var loader = new THREE.TextureLoader();
-		loader.load('public/map.png', function(texture){
-			let geometry = THREE.SphereGeometry(20,100,100)
+		loader.load('public/sun.jpg', function(texture){
+			let geometry = new THREE.SphereGeometry(5,100,100);
 			let material = new THREE.MeshBasicMaterial({
 				map: texture
 				});
@@ -22,7 +22,7 @@
 			mesh.position.y= 0;
 			scene.add(mesh);
 		});
-		/*let groundMaterial = new THREE.MeshPhongMaterial({
+		let groundMaterial = new THREE.MeshPhongMaterial({
 			color: Math.random() * 0xfffff00,
 			//wireframe: !null
 		});
@@ -50,13 +50,13 @@
 		scene.add(mesh3);
 		scene.add(mesh4);
 		scene.add(new THREE.AmbientLight(0x404040));
-		scene.add(pointLight);*/
+		scene.add(pointLight);
 
 		function loop(){
 			requestAnimationFrame(loop);
 			//console.log("new frame");
-			//mesh.rotation.y += 0.05;
-			//mesh.rotation.z += 0.02;
+			mesh.rotation.y += 0.002;
+			//mesh.rotation.z += 0.002;
 			/*mesh2.rotation.y += 0.05;
 			mesh2.rotation.z += 0.02;
 			mesh3.rotation.y += 0.05;
